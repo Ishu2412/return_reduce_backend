@@ -1,7 +1,16 @@
+import bcrypt from "bcrypt";
+
 import User from "../../models/user.js";
+
+const saltRounds = 10;
 
 async function findUser(data) {
   return await User.findOne({ email: data.email });
+}
+
+async function registerUser(user) {
+  const newUser = new User(user);
+  await newUser.save();
 }
 
 export async function register(req, res) {

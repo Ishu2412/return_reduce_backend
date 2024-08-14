@@ -1,3 +1,5 @@
+import bcrypt from "bcrypt";
+
 import User from "../../models/user.js";
 
 async function findUser(data) {
