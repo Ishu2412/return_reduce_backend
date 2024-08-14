@@ -4,7 +4,7 @@ async function findUser(data) {
   return await User.findOne({ email: data.email });
 }
 
-app.post("/login", async (req, res) => {
+export async function login(req, res) {
   try {
     const data = {
       email: req.body.email,
@@ -30,4 +30,4 @@ app.post("/login", async (req, res) => {
   } catch {
     res.status(500).send(`Internal Server Error`);
   }
-});
+}

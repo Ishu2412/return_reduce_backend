@@ -7,6 +7,7 @@ import env from "dotenv";
 import { get404 } from "./controllers/error.js";
 import sizeRouter from "./routes/size.js";
 import genuineRouter from "./routes/checkGenuine.js";
+import authenticationRouter from "./routes/authentication.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
