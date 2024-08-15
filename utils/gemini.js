@@ -88,7 +88,9 @@ export async function gemini(url1, url2) {
     safetySettings,
   });
 
-  const prompt = `These two images are of same object before and after delivery. Compare if the object can be returned or not.`;
+  const prompt = `These two images are of the same object before and after delivery from different angles. Compare if the object can be returned or not. Provide the data in clean, plain string format in a single line, exactly as shown below:
+  "The damage is in hinge and the laptop is liable for return."
+  Do not include any extra characters like backslashes, escape sequences, next line character or additional formatting.`;
 
   const imageParts = [
     fileToGenerativePart(

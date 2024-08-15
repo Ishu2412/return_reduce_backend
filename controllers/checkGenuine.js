@@ -6,7 +6,7 @@ export async function check(req, res) {
     const result = await gemini(url1, url2);
     res.status(200).json({ result });
   } catch (err) {
-    console.log(`Error while calculating the size = ${err}`);
+    console.log(`Error while cecking genuine = ${err}`);
     res.status(500).json({ message: "Internal Sever Error" });
   }
 }
